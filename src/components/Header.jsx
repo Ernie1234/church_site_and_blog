@@ -36,7 +36,7 @@ function Header() {
 
               <h1 className="text-4xl lg:text-5xl font-semibold">
                 <span>{text}</span>
-                <Cursor cursorColor="#f7ab0a" />
+                <Cursor cursorColor="#BA765F" />
               </h1>
             </div>
             <p className="text-sm text-justify font-[Inter] py-8">

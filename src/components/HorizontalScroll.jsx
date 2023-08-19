@@ -1,4 +1,6 @@
+import { AiFillYoutube } from "react-icons/ai";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 import { data } from "../configs/data";
 function HorizontalScroll() {
   const slideLeft = () => {
@@ -11,8 +13,21 @@ function HorizontalScroll() {
     slider.scrollLeft = slider.scrollLeft + 500;
   };
   return (
-    <div>
-      <div className="relative flex items-center">
+    <div
+      className="mt-[25vh] fle
+     flex-col w-[95%] m-auto"
+    >
+      <Link
+        to="https://www.youtube.com/@GideonOdomaOfficial"
+        target="_blank"
+        className="flex gap-5 items-center ml-28"
+      >
+        <h3 className="text-black text-lg font-bold uppercase hover:cursor-pointer">
+          gideon odoma official
+        </h3>
+        <AiFillYoutube size={45} color="#FF0000" />
+      </Link>
+      <div className="relative flex items-center ">
         <MdChevronLeft
           className="opacity-50 cursor-pointer hover:opacity-100"
           onClick={slideLeft}
@@ -23,12 +38,13 @@ function HorizontalScroll() {
           className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide no-scrollbar"
         >
           {data.map((item) => (
-            <img
-              key={item.id}
-              className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
-              src={item.img}
-              alt="img"
-            />
+            <Link key={item.id} to={item?.link}>
+              <img
+                className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
+                src={item.img}
+                alt="img"
+              />
+            </Link>
           ))}
         </div>
         <MdChevronRight
