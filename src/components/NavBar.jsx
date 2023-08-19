@@ -17,23 +17,20 @@ function NavBar() {
           >
             Home
           </NavLink>
-          <Link
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            to="about"
-            className={`transition-all text-white font-light text-sm upppercase hover:text-slate-300`}
+          <NavLink
+            to="/blog"
+            className={({ isActive }) => (isActive ? active : notActive)}
           >
             blog
-          </Link>
+          </NavLink>
+
           <Link
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
             to="about"
-            className={`transition-all text-white font-light text-sm upppercase hover:text-slate-300`}
+            className={`transition-all text-white font-light text-sm upppercase hover:text-slate-300 cursor-pointer`}
           >
             About
           </Link>
@@ -43,7 +40,7 @@ function NavBar() {
             offset={-70}
             duration={500}
             to="program"
-            className={`transition-all text-white font-light text-sm upppercase hover:text-slate-300`}
+            className={`transition-all text-white font-light text-sm upppercase hover:text-slate-300 cursor-pointer`}
           >
             Program
           </Link>
@@ -53,7 +50,7 @@ function NavBar() {
             offset={-70}
             duration={500}
             to="contact"
-            className={`transition-all text-white font-light text-sm upppercase hover:text-slate-300`}
+            className={`transition-all text-white font-light text-sm upppercase hover:text-slate-300 cursor-pointer`}
           >
             contact
           </Link>
