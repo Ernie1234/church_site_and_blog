@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import HorizontalScroll from "../components/HorizontalScroll";
 import NavBar from "../components/NavBar";
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
     <>
       <NavBar />
       <Header />
+      <HorizontalScroll />
     </>
   );
 }

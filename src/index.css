@@ -9,3 +9,34 @@
       "Helvetica Neue", sans-serif;
   }
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #475443 #475443;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #ea9715;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #475443;
+  border-radius: 14px;
+  border: 3px solid #475443;
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}

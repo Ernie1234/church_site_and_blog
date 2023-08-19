@@ -1,18 +1,18 @@
 import vid from "../assets/share.mp4";
 import Hero from "../assets/apostle1.png";
 import Newletter from "./Newletter";
-// import { Cursor, useTypewriter } from "react-simple-typewriter";
+
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 function Header() {
-  //   const [text, count] = useTypewriter({
-  //     words: ["Gideon Odoma"],
-  //     loop: false,
-  //     delaySpeed: 2000,
-  //     typeSpeed: 20,
-  //     deleteSpeed: 20,
-  //   });
+  const [text] = useTypewriter({
+    words: ["Gideon Odoma"],
+    loop: false,
+    delaySpeed: 5000,
+    typeSpeed: 100,
+  });
   return (
-    <header className="relative h-[100vh] w-full scroll-smooth bg-slate-900">
+    <header className="relative h-[100vh] w-full scroll-smooth bg-slate-900 mb-10">
       <div className="absolute z-0">
         <video
           src={vid}
@@ -31,14 +31,12 @@ function Header() {
             <img src={Hero} alt="Hero" />
           </div>
           <div className="w-3/5 flex flex-col justify-center text-white items-end pr-40">
-            {/* <h1 className="text-5xl lg:text-6xl font-semibold px-10">
-              <span>{text}</span>
-              <Cursor cursorColor="#f7ab0a" />
-            </h1> */}
             <div className="uppercase flex items-end flex-col font-[Inter]">
               <h3 className="text-md ">Hello! My name </h3>
-              <h1 className="text-4xl lg:text-5xl font-semibold ">
-                Gideon Odoma
+
+              <h1 className="text-4xl lg:text-5xl font-semibold">
+                <span>{text}</span>
+                <Cursor cursorColor="#f7ab0a" />
               </h1>
             </div>
             <p className="text-sm text-justify font-[Inter] py-8">
