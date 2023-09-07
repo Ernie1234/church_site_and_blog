@@ -38,7 +38,7 @@ function HorizontalScroll() {
           className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide no-scrollbar"
         >
           {data.map((item) => (
-            <Link key={item.id} to={item?.link}>
+            <Link key={item.id} to={item?.link} target="_blank">
               <img
                 className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
                 src={item.img}
