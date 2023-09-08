@@ -52,3 +52,18 @@ export const data = [
     img: "https://images.unsplash.com/photo-1542262868-cec49cce6571?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fG9jZWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60",
   },
 ];
+
+export const blogQuery = `*[_type == 'post'] {
+        title,
+        slug,
+        body,
+        publishedAt,
+        mainImage {
+            asset -> {
+            _id,
+            url
+        },
+        alt,
+    },
+    "name":author -> name,
+    } | order(publishedAt desc)`;
