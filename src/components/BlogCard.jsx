@@ -26,7 +26,7 @@ function BlogCard() {
   }
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-full mx-auto px-5 mt-16 mb-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-full">
         <Card stories={stories} />
       </section>
     </>
