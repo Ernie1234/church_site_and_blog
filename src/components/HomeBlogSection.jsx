@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { ImBlog } from "react-icons/im";
+import PropTypes from "prop-types";
 
 import { client } from "../configs/client";
 import { blogQuery } from "../configs/data";
 import Spinner from "./Spinner";
 import Card from "./Card";
 
-function HomeBlogSection() {
+function HomeBlogSection({ header }) {
   const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -25,9 +26,11 @@ function HomeBlogSection() {
 
   return (
     <section className="max-w-7xl mx-auto px-5 my-12">
-      <div className="flex gap-5 items-center ml-28">
-        <h2 className="text-black text-lg font-bold uppercase">Our blog</h2>
-        <ImBlog size={35} color="#FF0000" />
+      <div className="flex gap-5 items-center ml-28 text-black dark:text-white">
+        <h2 className="text-black dark:text-white text-lg font-bold uppercase">
+          {header}
+        </h2>
+        <ImBlog size={35} />
       </div>
       {loading ? (
         <Spinner />
@@ -41,5 +44,9 @@ function HomeBlogSection() {
     </section>
   );
 }
+
+HomeBlogSection.propTypes = {
+  header: PropTypes.string,
+};
 
 export default HomeBlogSection;

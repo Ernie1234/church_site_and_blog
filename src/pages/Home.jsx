@@ -11,7 +11,7 @@ function Home() {
       <Header />
       <section id="program" className="snap-start"></section>
       <HorizontalScroll />
-      <HomeBlogSection />
+      <HomeBlogSection header="Our Blog" />
       <Footer />
     </>
   );

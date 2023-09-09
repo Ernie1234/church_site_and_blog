@@ -67,3 +67,22 @@ export const blogQuery = `*[_type == 'post'] {
     },
     "name":author -> name,
     } | order(publishedAt desc)`;
+
+export const postQuery = (slug) => {
+  const query = `*[slug.current == '${slug}'] {
+        title,
+        slug,
+        body,
+        publishedAt,
+        mainImage {
+            asset -> {
+            _id,
+            url
+        },
+        alt,
+    },
+    "name":author -> name,
+    }`;
+
+  return query;
+};

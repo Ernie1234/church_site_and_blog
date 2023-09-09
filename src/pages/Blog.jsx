@@ -1,10 +1,13 @@
-import BlogSection from "../components/BlogSection";
+import BlogHeader from "../components/BlogHeader";
+import BlogPosts from "../components/BlogPosts";
+import NavBar from "../components/NavBar";
 
 function Blog() {
   return (
-    <div>
-      <h1 className="text-slate-700 text-3xl font-bold text-center">blog</h1>
-      <BlogSection />
+    <div className="dark:bg-bgBlack-900">
+      <NavBar />
+      <BlogHeader />
+      <BlogPosts />
     </div>
   );
 }

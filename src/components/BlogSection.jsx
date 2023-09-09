@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import BlogCard from "./BlogCard";
-import Button from "./Button";
-import { client } from "../configs/client";
-import Spinner from "./Spinner";
+
 import { blogQuery } from "../configs/data";
+import { client } from "../configs/client";
+import Button from "./Button";
+import Spinner from "./Spinner";
+import Card from "./Card";
 
 function BlogSection() {
   const [stories, setStories] = useState([]);
@@ -27,7 +28,7 @@ function BlogSection() {
   return (
     <>
       <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-5 mt-16 mb-8">
-        <BlogCard stories={stories} />
+        <Card stories={stories} />
       </section>
       <div className="flex justify-end max-w-7xl mx-auto">
         <Button text="Read all blog posts" />

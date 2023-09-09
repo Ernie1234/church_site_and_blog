@@ -8,7 +8,7 @@ function Card({ stories }) {
     <>
       {stories?.map((story) => (
         <Link to={`/blog/${story.slug.current}`} key={story.slug.current}>
-          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-800">
+          <div className="max-w-sm bg-white border rounded-lg shadow border-slate-200 hover:bg-slate-50 dark:hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-800">
             <img
               className="object-cover w-full rounded-t-lg h-72"
               src={story.mainImage.asset.url}
