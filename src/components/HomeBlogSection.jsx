@@ -25,7 +25,7 @@ function HomeBlogSection({ header }) {
   const trimmedArr = stories.slice(0, 3);
 
   return (
-    <section className="max-w-7xl mx-auto px-5 my-12">
+    <section className="max-w-7xl mx-auto px-12 my-12">
       <div className="flex gap-5 items-center ml-28 text-black dark:text-white">
         <h2 className="text-black dark:text-white text-lg font-bold uppercase">
           {header}

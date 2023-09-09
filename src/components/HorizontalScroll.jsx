@@ -14,13 +14,13 @@ function HorizontalScroll() {
   };
   return (
     <div
-      className="mt-[25vh] fle
+      className="mt-8 fle
      flex-col w-[95%] m-auto"
     >
       <Link
         to="https://www.youtube.com/@GideonOdomaOfficial"
         target="_blank"
-        className="flex gap-5 items-center ml-28"
+        className="flex gap-5 items-center justify-center lg:justify-normal lg:ml-28"
       >
         <h3 className="text-black text-lg font-bold uppercase hover:cursor-pointer">
           gideon odoma official
@@ -40,7 +40,7 @@ function HorizontalScroll() {
           {data.map((item) => (
             <Link key={item.id} to={item?.link} target="_blank">
               <img
-                className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
+                className="w-[250px] h-[250px] md:w-[320px] md:h-[320px] object-cover inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
                 src={item.img}
                 alt="img"
               />
