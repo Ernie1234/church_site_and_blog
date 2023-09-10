@@ -1,4 +1,6 @@
 import { createClient } from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
+
 export const client = createClient({
   projectId: import.meta.env.VITE_SANITY_SECRET_PROJECT_ID, // DONE
   dataset: "production", // my comment: set to 'production' or 'development'    DONE
@@ -7,3 +9,7 @@ export const client = createClient({
   token: import.meta.env.VITE_SANITY_SECRET_TOKEN,
   ignoreBrowserTokenWarning: true,
 });
+
+const builder = imageUrlBuilder(client);
+
+export const urlFor = (source) => builder.image(source);

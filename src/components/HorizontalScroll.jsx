@@ -14,7 +14,7 @@ function HorizontalScroll() {
   };
   return (
     <div
-      className="mt-8 fle
+      className="pt-8 flex
      flex-col w-[95%] m-auto"
     >
       <Link
@@ -22,14 +22,14 @@ function HorizontalScroll() {
         target="_blank"
         className="flex gap-5 items-center justify-center lg:justify-normal lg:ml-28"
       >
-        <h3 className="text-black text-lg font-bold uppercase hover:cursor-pointer">
+        <h3 className="text-black dark:text-white text-lg font-bold uppercase hover:cursor-pointer">
           gideon odoma official
         </h3>
         <AiFillYoutube size={45} color="#FF0000" />
       </Link>
       <div className="relative flex items-center ">
         <MdChevronLeft
-          className="opacity-50 cursor-pointer hover:opacity-100"
+          className="opacity-50 dark:text-white cursor-pointer hover:opacity-100"
           onClick={slideLeft}
           size={40}
         />
@@ -48,7 +48,7 @@ function HorizontalScroll() {
           ))}
         </div>
         <MdChevronRight
-          className="opacity-50 cursor-pointer hover:opacity-100"
+          className="opacity-50 dark:text-white cursor-pointer hover:opacity-100"
           onClick={slideRight}
           size={40}
         />

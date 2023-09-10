@@ -11,16 +11,16 @@ function Header() {
     typeSpeed: 100,
   });
   return (
-    <header className="relative h-full lg:h-[100vh] w-full scroll-smooth text-black dark:text-white bg-gray-300 dark:bg-bgBlack-900 mb-10 flex flex-col md:flex-row">
+    <header className="relative  w-full scroll-smooth text-black dark:text-white bg-gray-300 dark:bg-bgBlack-900 flex flex-col md:flex-row">
       <img
         src="https://yt3.googleusercontent.com/bMe2T84dWWCEH-10JP4ZM4rAihyDxkPk3OPrfSeuw7awb4ab5u11yifxt1LMO-_gMR-4QysBMg=s900-c-k-c0x00ffffff-no-rj"
         alt="hero"
         className="block md:hidden self-center w-40 h-40 p-1 rounded-full ring-2 ring-gray-400 dark:ring-gray-500 mt-6"
       />
-      <div className="hidden md:w-2/5 md:flex flex-col md:self-end ">
+      <div className="hidden pt-10 md:w-2/5 md:flex flex-col md:self-end ">
         <img src={Hero} alt="Hero" />
       </div>
-      <div className="w-full p-6 md:w-3/5 flex flex-col justify-center text-black dark:text-white items-end md:pr-12 lg:pr-20">
+      <div className="w-full p-6 md:-ml-16 lg:-ml-20 md:w-3/5 flex flex-col justify-center text-black dark:text-white items-end">
         <div className="uppercase flex items-end flex-col font-[Inter]">
           <h3 className="text-md ">Hello! My name </h3>
 

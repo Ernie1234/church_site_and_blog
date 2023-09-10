@@ -42,8 +42,15 @@ function BlogPost() {
           <h2 className="my-5 text-black dark:text-gray-200 text-6xl">
             {post.title}
           </h2>
-          <div className="flex justify-between mr-8 ">
-            <Avatar arthur={post.name} date={post.publishedAt} />
+          <div className="flex flex-col md:flex-row justify-between mr-8 gap-8 md:gap-0">
+            {post.publishedAt && (
+              <Avatar
+                arthur={post.authorName}
+                moment={post.publishedAt}
+                image={post.authorImage.asset._ref}
+              />
+            )}
+            {console.log(post)}
             <Socials />
           </div>
         </div>
@@ -62,9 +69,9 @@ function BlogPost() {
                 {post.title}
               </h5>
 
-              <p className="mb-3 font-normal text-black dark:text-gray-200">
+              <article className="mb-3 font-normal text-black dark:text-gray-200">
                 <PortableText value={post.body} />
-              </p>
+              </article>
             </div>
           </div>
           <HomeBlogSection header="More Posts" />

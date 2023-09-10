@@ -1,3 +1,4 @@
+import About from "../components/About";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HomeBlogSection from "../components/HomeBlogSection";
@@ -9,10 +10,18 @@ function Home() {
     <>
       <NavBar />
       <Header />
-      <section id="program" className="snap-start"></section>
-      <HorizontalScroll />
-      <HomeBlogSection header="Our Blog" />
-      <Footer />
+      <div className="bg-white dark:bg-gray-900">
+        <section id="program" className="snap-start">
+          <HorizontalScroll />
+        </section>
+        <HomeBlogSection header="Our Blog" />
+        <section id="about" className="snap-start">
+          <About />
+        </section>
+        <section id="contact" className="snap-start">
+          <Footer />
+        </section>
+      </div>
     </>
   );
 }

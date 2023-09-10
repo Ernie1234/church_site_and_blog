@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { formatDistance, subDays } from "date-fns";
 
 import Button2 from "./Button2";
 
@@ -15,9 +16,16 @@ function Card({ stories }) {
               alt={story.slug.current}
               loading="lazy"
             />
-
+            {/* {console.log(story.publishedAt)} */}
             <div className="p-5">
-              <p className="text-sm text-gray-300">{story.name} &middot; </p>
+              <p className="text-sm text-gray-300">
+                {story.name} &middot;
+                {formatDistance(
+                  subDays(new Date(story.publishedAt), 0),
+                  new Date(),
+                  { addSuffix: true }
+                )}
+              </p>
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {story.title}
               </h5>
