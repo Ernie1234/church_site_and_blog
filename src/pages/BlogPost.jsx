@@ -50,7 +50,6 @@ function BlogPost() {
                 image={post.authorImage.asset._ref}
               />
             )}
-            {console.log(post)}
             <Socials />
           </div>
         </div>
@@ -68,10 +67,14 @@ function BlogPost() {
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {post.title}
               </h5>
-
               <article className="mb-3 font-normal text-black dark:text-gray-200">
                 <PortableText value={post.body} />
               </article>
+
+              {/* author card details */}
+              {/* NOTE NOTE NOTE */}
+              {/* <AuthorCard /> */}
+              {/* Could not resolve the issue here: left till further knowledge to resolve it */}
             </div>
           </div>
           <HomeBlogSection header="More Posts" />

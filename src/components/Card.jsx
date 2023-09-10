@@ -19,7 +19,7 @@ function Card({ stories }) {
             {/* {console.log(story.publishedAt)} */}
             <div className="p-5">
               <p className="text-sm text-gray-300">
-                {story.name} &middot;
+                {story.name} &middot;{" "}
                 {formatDistance(
                   subDays(new Date(story.publishedAt), 0),
                   new Date(),

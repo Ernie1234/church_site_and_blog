@@ -8,9 +8,9 @@ function Avatar({ arthur, moment, image }) {
     <>
       <div className="flex items-center space-x-4">
         <img
-          className="w-10 h-10 rounded-full"
-          src={urlFor(image).width(200).quality(100).url()}
-          alt=""
+          className="w-10 h-10 rounded-full object-cover"
+          src={urlFor(image).quality(100).url()}
+          alt={image}
         />
         <div className="font-medium dark:text-white">
           <div>{arthur}</div>

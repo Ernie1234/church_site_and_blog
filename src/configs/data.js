@@ -78,5 +78,17 @@ export const postQuery = (slug) => {
 
   return query;
 };
+export const authorQuery = (slug) => {
+  const query = `*[slug.current == '${slug}'] {
+    publishedAt,
+    author -> {
+    name,
+    bio,
+    image
+  }
+  }`;
+
+  return query;
+};
 // "authorImage": author ->  image
 // "authorImage": author->imageField.asset->url
